@@ -117,6 +117,25 @@ nav {
     }
 }
 
+.mainMain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.mainImgHolder{
+    background-color: aquamarine;
+}
+
+.mainImg{
+    width: 100%;
+    height: auto;
+}
+
+.mainTxtHolder{
+    background-color: rgb(238, 233, 131); 
+    text-align: center;
+    padding: 20px;
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;

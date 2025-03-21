@@ -121,12 +121,19 @@ nav {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.mainImg{
+.mainImgHolder{
     background-color: aquamarine;
 }
 
-.mainTxt{
+.mainImg{
+    width: 100%;
+    height: auto;
+}
+
+.mainTxtHolder{
     background-color: rgb(238, 233, 131); 
+    text-align: center;
+    padding: 20px;
 }
 
 footer {
