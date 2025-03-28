@@ -122,24 +122,26 @@ nav {
     grid-template-columns: 50% 50%;
 }
 
-.experienceTitle{
+.workTitle{
     background-color: #f4a261;
     text-align: center;
 }
 
-.experienceImgHolder{
+.workImgHolder{
     background-color: aqua;
     text-align: center;
+    width: 50vw;
 }
 
-.experienceImg{
+.workImg{
     size: 100%;
 }
 
-.experienceTxtHolder{
+.workTxtHolder{
     background-color: aquamarine;
 
     text-align: center;
+    width: 50vw;
 }
 
 footer {

@@ -118,12 +118,38 @@ nav {
 
 .main {
     display: grid;
-    grid-template-areas: 'auto auto';
+    grid-template-rows: 50% 50%;
 }
 
+
+
 .mainImg {
-    grid-area: auto;
     background-color: #f4a261;
+    width: 100vw;
+}
+
+#placeholdImg {
+    max-width: 100%;
+    height: auto;
+}
+
+.contactMainHolder {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: aquamarine;
+    min-height: 50px;
+}
+
+.contactTitle{
+    size: 100%;
+}
+
+
+
+.contactInfo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: blue;
 }
 
 
