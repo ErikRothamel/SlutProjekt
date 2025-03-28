@@ -117,26 +117,31 @@ nav {
     }
 }
 
-.mainMain {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-.mainImgHolder{
-    background-color: aquamarine;
+.main{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.mainImg{
-    width: 100%;
-    height: auto;
-}
-
-.mainTxtHolder{
-    background-color: rgb(238, 233, 131); 
+.experienceTitle{
+    background-color: #f4a261;
     text-align: center;
-    padding: 20px;
 }
 
-/* Footer Styles */
+.experienceImgHolder{
+    background-color: aqua;
+    text-align: center;
+}
+
+.experienceImg{
+    size: 100%;
+}
+
+.experienceTxtHolder{
+    background-color: aquamarine;
+
+    text-align: center;
+}
+
 footer {
     background-color: #333;
     color: white;

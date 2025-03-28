@@ -81,27 +81,25 @@ nav {
     }
 }
 
-.main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.mainMain {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
-
-.experienceTitle{
-    background-color: #f4a261;
-    width: 50%;
-}
-
-.experienceImg{
-    background-color: aqua;
-    width: 50%;
-}
-
-.experienceTxt{
+.mainImgHolder{
     background-color: aquamarine;
-    width: 50%;
-    text-align: center;
 }
+
+.mainImg{
+    width: 100%;
+    height: auto;
+}
+
+.mainTxtHolder{
+    background-color: rgb(238, 233, 131); 
+    text-align: center;
+    padding: 20px;
+}
+
 
 .hamburger span {
     width: 25px;
