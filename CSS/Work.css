@@ -89,7 +89,6 @@ nav {
     margin: 5px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
@@ -123,8 +122,12 @@ nav {
 }
 
 .workTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #f4a261;
-    text-align: center;
+    font-size: 3em;
+    width: 50vw;
 }
 
 .workImgHolder{
@@ -134,14 +137,76 @@ nav {
 }
 
 .workImg{
-    size: 100%;
+    width: 50vw;
 }
 
 .workTxtHolder{
     background-color: aquamarine;
-
+    padding: 20px;
     text-align: center;
     width: 50vw;
+}
+
+.workTxtHolder > p{
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #title{
+        order: 1;
+        width: 100vw;
+    }
+
+    #img1{
+        order: 2;
+        width: 100vw;
+    }
+
+    #txt1{
+        order: 3;
+        width: 100vw;
+    }
+
+    #img2{
+        order: 4;
+        width: 100vw;
+    }
+
+    #txt2{
+        order: 5;
+        width: 100vw;
+    }
+
+    #img3{
+        order: 6;
+        width: 100vw;
+    }
+
+    #txt3{
+        order: 7;
+        width: 100vw;
+    }
+
+    #img4{
+        order: 8;
+        width: 100vw;
+    }
+
+    #txt4{
+        order: 9;
+        width: 100vw;
+    }
+
+    #img5{
+        order: 10;
+        width: 100vw;
+    }
+    
 }
 
 footer {

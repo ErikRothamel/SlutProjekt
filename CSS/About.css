@@ -136,6 +136,10 @@ nav {
     padding: 20px;
 }
 
+.mainTxtHolder > p {
+    padding-bottom: 20px;
+}
+
 footer {
     background-color: #333;
     color: white;
