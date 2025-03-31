@@ -124,7 +124,7 @@ nav {
 
 
 .mainImgHolder {
-    background-color: #f4a261;
+    background-color:   black;
     width: 100vw;
 }
 
@@ -136,7 +136,7 @@ nav {
 .contactMainHolder {
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: aquamarine;
+    background-color: whitesmoke;
     min-height: 50px;
 }
 
@@ -144,16 +144,33 @@ nav {
     size: 100%;
 }
 
-
-
 .contactInfo{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: blue;
+    display: block;
 }
 
+.contactInfoPhone{
+    display: none;
+}
+
+.contactInfoHolder{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .contactInfo{
+        display: none;
+    }
+
+    .contactInfoPhone{
+        display: block;
+    }
 
 
+
+
+}
 
 
 
