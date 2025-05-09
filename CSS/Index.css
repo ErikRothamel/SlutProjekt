@@ -107,68 +107,32 @@ nav {
     margin: 5px;
 }
 
-.main {
-    display: grid;
-    grid-template-rows: auto auto;
+
+.mainMain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.mainImgHolder{
+    background-color: black;
+    overflow: hidden;
 }
 
-
-
-.mainImgHolder {
-    background-color:   black;
-    width: 100vw;
+.mainImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-#placeholdImg {
-    max-width: 100%;
-    height: auto;
+.mainTxtHolder{
+    background-color: whitesmoke; 
+    text-align: center;
+    padding: 20px;
 }
 
-.contactMainHolder {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: whitesmoke;
-    min-height: 50px;
+.mainTxtHolder > p {
+    padding-bottom: 20px;
 }
-
-.contactTitle{
-    size: 100%;
-}
-
-.contactInfo{
-    display: block;
-}
-
-.contactInfoPhone{
-    display: none;
-}
-
-.contactInfoHolder{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: whitesmoke;
-}
-
-@media screen and (max-width: 768px) {
-    .contactInfo{
-        display: none;
-    }
-
-    .contactInfoPhone{
-        display: block;
-    }
-
-
-
-
-}
-
-
-
-
-
-
-
 
 footer {
     background-color: #333;

@@ -10,7 +10,7 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     background-color: #333;
@@ -18,7 +18,6 @@ header {
 }
 
 nav {
-    flex-direction: column;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,15 +28,11 @@ nav {
 }
 
 .nav-links {
-    flex-direction: column;
-    align-items: center;
     list-style: none;
-    display: none;
+    display: flex;
     justify-content: space-between; 
-    width: 100%;
-    padding: 20px 0;
-    position: absolute;
-    background: #333;
+    width: 100%; 
+    padding: 0;
 }
 
 .nav-links li {
@@ -58,30 +53,16 @@ nav {
     color: #f4a261;
 }
 
-.nav-links.active {
-    display: flex;
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     nav {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .nav-links {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        display: flex;
+        display: none;
         width: 100%;
-        left: 0;
-        padding: 0;
-        text-align: center;
     }
 
     .nav-links.active {
@@ -90,15 +71,13 @@ nav {
 
     .nav-links li {
         width: 100%;
-        margin: 10px 0;
     }
 
     .hamburger {
-        display: none;
-        justify-content: center;
-        align-items: center;
-    }    
+        display: flex;
+    }
 }
+
 
 .hamburger span {
     width: 25px;
@@ -107,68 +86,125 @@ nav {
     margin: 5px;
 }
 
-.main {
-    display: grid;
-    grid-template-rows: auto auto;
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-
-
-.mainImgHolder {
-    background-color:   black;
-    width: 100vw;
-}
-
-#placeholdImg {
-    max-width: 100%;
-    height: auto;
-}
-
-.contactMainHolder {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: whitesmoke;
-    min-height: 50px;
-}
-
-.contactTitle{
-    size: 100%;
-}
-
-.contactInfo{
-    display: block;
-}
-
-.contactInfoPhone{
-    display: none;
-}
-
-.contactInfoHolder{
+.main{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.workTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: whitesmoke;
+    font-size: 3em;
+    width: 50vw;
+}
+
+.workImgHolder{
+    background-color: black;
+    text-align: center;
+    width: 50vw;
+}
+
+.workImg{
+    width: 50vw;
+}
+
+.workTxtHolder{
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    width: 50vw;
+}
+
+.workTxtHolder > p{
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .contactInfo{
-        display: none;
+    .main {
+        display: grid;
+        grid-template-columns: 100%;
     }
 
-    .contactInfoPhone{
-        display: block;
+    #title{
+        order: 1;
+        width: 100vw;
     }
 
+    #img1{
+        order: 2;
+        width: 100vw;
+    }
 
+    #txt1{
+        order: 3;
+        width: 100vw;
+    }
 
+    #img2{
+        order: 4;
+        width: 100vw;
+    }
 
+    #txt2{
+        order: 5;
+        width: 100vw;
+    }
+
+    #img3{
+        order: 6;
+        width: 100vw;
+    }
+
+    #txt3{
+        order: 7;
+        width: 100vw;
+    }
+
+    #img4{
+        order: 8;
+        width: 100vw;
+    }
+
+    #txt4{
+        order: 9;
+        width: 100vw;
+    }
+
+    #img5{
+        order: 10;
+        width: 100vw;
+    }
+    
 }
-
-
-
-
-
-
-
 
 footer {
     background-color: #333;
@@ -183,8 +219,6 @@ footer {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    flex-direction: column;
-    text-align: center;
 }
 
 .footer-left, .footer-center, .footer-right {
@@ -227,9 +261,9 @@ footer {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .footer-container {
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
     }
 }
