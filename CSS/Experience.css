@@ -1,13 +1,16 @@
+/* Grundläggande reset för alla element */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Gör att padding och border inkluderas i elementets totala storlek */
 }
 
+/* Bas-typsnitt för hela sidan */
 body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Header med centrerat innehåll och mörk bakgrund */
 header {
     display: flex;
     justify-content: center;
@@ -17,6 +20,7 @@ header {
     color: white;
 }
 
+/* Navigationsbar layout – mobil först (kolumnlayout) */
 nav {
     flex-direction: column;
     display: flex;
@@ -28,23 +32,26 @@ nav {
     padding: 15px 20px;
 }
 
+/* Länkar i navigationsmenyn – dolda som standard (för hamburger) */
 .nav-links {
     flex-direction: column;
     align-items: center;
     list-style: none;
     display: none;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
     padding: 20px 0;
     position: absolute;
     background: #333;
 }
 
+/* Varje menyobjekt fyller ut sin plats och är centrerat */
 .nav-links li {
-    flex-grow: 1; 
-    text-align: center; 
+    flex-grow: 1;
+    text-align: center;
 }
 
+/* Länkstil i navigation */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -54,14 +61,17 @@ nav {
     transition: color 0.3s ease;
 }
 
+/* Hovereffekt på länkar */
 .nav-links a:hover {
     color: #f4a261;
 }
 
+/* När menyn är aktiv (öppen), visas den */
 .nav-links.active {
     display: flex;
 }
 
+/* Hamburger-ikonens layout (tre streck) */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -69,6 +79,7 @@ nav {
     justify-content: center;
 }
 
+/* Anpassningar för större skärmar (desktop) */
 @media screen and (min-width: 768px) {
     nav {
         flex-direction: row;
@@ -94,12 +105,13 @@ nav {
     }
 
     .hamburger {
-        display: none;
+        display: none; /* Döljer hamburger på större skärmar */
         justify-content: center;
         align-items: center;
-    }    
+    }
 }
 
+/* Utseendet på varje linje i hamburger-menyn */
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -107,32 +119,39 @@ nav {
     margin: 5px;
 }
 
+/* Layout för huvudinnehåll i två kolumner */
 .mainMain {
-  display: grid;
-  grid-template-columns: 50% 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
-.mainImgHolder{
+
+/* Sektion som håller bilden – svart bakgrund och dold overflow */
+.mainImgHolder {
     background-color: black;
     overflow: hidden;
 }
 
-.mainImg{
+/* Själva bilden – täcker hela utrymmet snyggt */
+.mainImg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover; /* Gör så att bilden fyller utan att sträckas */
+    object-position: center; /* Centrerar bilden */
 }
 
-.mainTxtHolder{
-    background-color: whitesmoke; 
+/* Textsektion bredvid bilden */
+.mainTxtHolder {
+    background-color: whitesmoke;
     text-align: center;
     padding: 20px;
 }
 
+/* Styling för paragrafer i textdelen */
 .mainTxtHolder > p {
     padding-bottom: 20px;
 }
 
+/* Footer med mörk bakgrund och vitt innehåll */
 footer {
     background-color: #333;
     color: white;
@@ -140,6 +159,7 @@ footer {
     text-align: center;
 }
 
+/* Footer layout – staplar sektioner vertikalt (mobil först) */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -150,17 +170,20 @@ footer {
     text-align: center;
 }
 
+/* Footer-sektioner (vänster, mitten, höger) */
 .footer-left, .footer-center, .footer-right {
     flex: 1;
     min-width: 250px;
     margin: 10px;
 }
 
+/* Rubriker i footern */
 .footer-left h3, .footer-center h3, .footer-right h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
+/* Lista i mittensektionen */
 .footer-center ul {
     list-style: none;
     padding: 0;
@@ -170,6 +193,7 @@ footer {
     margin: 5px 0;
 }
 
+/* Länkar i mitten – hovereffekt */
 .footer-center ul li a {
     text-decoration: none;
     color: white;
@@ -180,6 +204,7 @@ footer {
     color: #f4a261;
 }
 
+/* Text och länkar i högersektionen */
 .footer-right p, .footer-right a {
     font-size: 0.9rem;
     color: white;
@@ -190,6 +215,7 @@ footer {
     text-decoration: underline;
 }
 
+/* På breda skärmar visas footer-sektioner horisontellt */
 @media screen and (min-width: 768px) {
     .footer-container {
         flex-direction: row;

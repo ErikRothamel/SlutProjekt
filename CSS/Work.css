@@ -1,13 +1,16 @@
+/* Nollställer marginaler och padding samt använder border-box för enklare layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Grundläggande typsnitt för hela sidan */
 body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Header med centrerat innehåll och mörk bakgrund */
 header {
     display: flex;
     justify-content: center;
@@ -17,6 +20,7 @@ header {
     color: white;
 }
 
+/* Navigation – staplad layout för mindre skärmar */
 nav {
     flex-direction: column;
     display: flex;
@@ -28,23 +32,26 @@ nav {
     padding: 15px 20px;
 }
 
+/* Navigationslänkar – dolda som standard */
 .nav-links {
     flex-direction: column;
     align-items: center;
     list-style: none;
     display: none;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
     padding: 20px 0;
     position: absolute;
     background: #333;
 }
 
+/* Varje menyobjekt centrerat och fyller utrymme */
 .nav-links li {
-    flex-grow: 1; 
-    text-align: center; 
+    flex-grow: 1;
+    text-align: center;
 }
 
+/* Länkar i navigation */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -54,14 +61,17 @@ nav {
     transition: color 0.3s ease;
 }
 
+/* Hovereffekt på navigationslänkar */
 .nav-links a:hover {
     color: #f4a261;
 }
 
+/* Visar navigationslänkar när aktiv */
 .nav-links.active {
     display: flex;
 }
 
+/* Hamburger-ikon visas på mindre skärmar */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -69,6 +79,7 @@ nav {
     justify-content: center;
 }
 
+/* Anpassningar för större skärmar (desktop) */
 @media screen and (min-width: 768px) {
     nav {
         flex-direction: row;
@@ -97,9 +108,10 @@ nav {
         display: none;
         justify-content: center;
         align-items: center;
-    }    
+    }
 }
 
+/* Strecken i hamburger-menyn */
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -107,14 +119,14 @@ nav {
     margin: 5px;
 }
 
-
-.main{
-    
+/* Huvudcontainer för arbetssektionen */
+.main {
     display: grid;
     grid-template-columns: 100%;
 }
 
-.workTitle{
+/* Rubrikdel för arbeten */
+.workTitle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,134 +135,68 @@ nav {
     width: 100vw;
 }
 
-.workImgHolder{
+/* Bildbehållare */
+.workImgHolder {
     background-color: black;
     text-align: center;
     width: 100vw;
 }
 
-.workImg{
+/* Bilder – full bredd */
+.workImg {
     width: 100vw;
 }
 
-.workTxtHolder{
+/* Textbehållare under varje bild */
+.workTxtHolder {
     background-color: whitesmoke;
     padding: 20px;
     text-align: center;
     width: 100vw;
 }
 
-.workTxtHolder > p{
+/* Avstånd under textstycken */
+.workTxtHolder > p {
     padding-bottom: 20px;
 }
 
-#title{
-        order: 1;
-    }
+/* Ordning på sektionerna i grid-layouten */
+#title { order: 1; }
+#img1 { order: 2; }
+#txt1 { order: 3; }
+#img2 { order: 4; }
+#txt2 { order: 5; }
+#img3 { order: 6; }
+#txt3 { order: 7; }
+#img4 { order: 8; }
+#txt4 { order: 9; }
+#img5 { order: 10; }
 
-    #img1{
-        order: 2;
-    }
-
-    #txt1{
-        order: 3;
-    }
-
-    #img2{
-        order: 4;
-    }
-
-    #txt2{
-        order: 5;
-    }
-
-    #img3{
-        order: 6;
-    }
-
-    #txt3{
-        order: 7;
-    }
-
-    #img4{
-        order: 8;
-    }
-
-    #txt4{
-        order: 9;
-    }
-
-    #img5{
-        order: 10;
-    }
-    
-
+/* Layoutförändring på större skärmar (två kolumner) */
 @media screen and (min-width: 768px) {
-    .workImgHolder{
-        width: 50vw;
-    }
-
-    .workImg{
-        width: 50vw;
-    }
-
     .main {
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
-    #title{
-        order: 1;
+    .workImgHolder, .workImg, #title, #img1, #txt1, #img2, #txt2,
+    #img3, #txt3, #img4, #txt4, #img5 {
         width: 50vw;
     }
 
-    #img1{
-        order: 2;
-        width: 50vw;
-    }
-
-    #txt1{
-        order: 4;
-        width: 50vw;
-    }
-
-    #img2{
-        order: 3;
-        width: 50vw;
-    }
-
-    #txt2{
-        order: 5;
-        width: 50vw;
-    }
-
-    #img3{
-        order: 6;
-        width: 50vw;
-    }
-
-    #txt3{
-        order: 8;
-        width: 50vw;
-    }
-
-    #img4{
-        order: 7;
-        width: 50vw;
-    }
-
-    #txt4{
-        order: 9;
-        width: 50vw;
-    }
-
-    #img5{
-        order: 10;
-        width: 50vw;
-    }
-    
+    #title   { order: 1; }
+    #img1    { order: 2; }
+    #txt1    { order: 4; }
+    #img2    { order: 3; }
+    #txt2    { order: 5; }
+    #img3    { order: 6; }
+    #txt3    { order: 8; }
+    #img4    { order: 7; }
+    #txt4    { order: 9; }
+    #img5    { order: 10; }
 }
 
+/* Sidfotens stil */
 footer {
     background-color: #333;
     color: white;
@@ -258,6 +204,7 @@ footer {
     text-align: center;
 }
 
+/* Sidfotscontainer – kolumnlayout på små skärmar */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -268,17 +215,20 @@ footer {
     text-align: center;
 }
 
+/* Tre sektioner i footern */
 .footer-left, .footer-center, .footer-right {
     flex: 1;
     min-width: 250px;
     margin: 10px;
 }
 
+/* Rubriker i footern */
 .footer-left h3, .footer-center h3, .footer-right h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
+/* Länkar i mittensektionen */
 .footer-center ul {
     list-style: none;
     padding: 0;
@@ -298,6 +248,7 @@ footer {
     color: #f4a261;
 }
 
+/* Högerdelen – kontakt eller annan info */
 .footer-right p, .footer-right a {
     font-size: 0.9rem;
     color: white;
@@ -308,6 +259,7 @@ footer {
     text-decoration: underline;
 }
 
+/* Footer layout som rad på breda skärmar */
 @media screen and (min-width: 768px) {
     .footer-container {
         flex-direction: row;

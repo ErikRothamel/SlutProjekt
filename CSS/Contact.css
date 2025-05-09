@@ -1,13 +1,16 @@
+/* Global reset: Nollställ marginaler och paddings, samt sätt box-modellen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Grundläggande typsnitt för hela sidan */
 body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Header-stil: centrerat innehåll med mörk bakgrund */
 header {
     display: flex;
     justify-content: center;
@@ -17,6 +20,7 @@ header {
     color: white;
 }
 
+/* Navigation wrapper: kolumnlayout för mobil först */
 nav {
     flex-direction: column;
     display: flex;
@@ -28,6 +32,7 @@ nav {
     padding: 15px 20px;
 }
 
+/* Navigation länkar – dolda från början, visas som meny vid mobil */
 .nav-links {
     flex-direction: column;
     align-items: center;
@@ -40,11 +45,13 @@ nav {
     background: #333;
 }
 
+/* Varje menyobjekt centreras och fyller ut sin plats */
 .nav-links li {
     flex-grow: 1; 
     text-align: center; 
 }
 
+/* Länkutseende i navigationen */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -54,14 +61,17 @@ nav {
     transition: color 0.3s ease;
 }
 
+/* Hovereffekt för länkar */
 .nav-links a:hover {
     color: #f4a261;
 }
 
+/* Visar menyn när den har klassen .active */
 .nav-links.active {
     display: flex;
 }
 
+/* Hamburgerikonens layout (mobil) */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -69,6 +79,7 @@ nav {
     justify-content: center;
 }
 
+/* Anpassningar för större skärmar (desktop/tablet) */
 @media screen and (min-width: 768px) {
     nav {
         flex-direction: row;
@@ -100,6 +111,7 @@ nav {
     }    
 }
 
+/* Utseende på hamburgerikonen (de tre strecken) */
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -107,23 +119,25 @@ nav {
     margin: 5px;
 }
 
+/* Main-wrapper med två rader (kan vara bild + innehåll) */
 .main {
     display: grid;
     grid-template-rows: auto auto;
 }
 
-
-
+/* Sektion för huvudbild – helbredd med svart bakgrund */
 .mainImgHolder {
-    background-color:   black;
+    background-color: black;
     width: 100vw;
 }
 
+/* Responsiv bild */
 #placeholdImg {
     max-width: 100%;
     height: auto;
 }
 
+/* Kontaktsektion med två kolumner */
 .contactMainHolder {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -131,45 +145,40 @@ nav {
     min-height: 50px;
 }
 
-.contactTitle{
+/* Titel för kontaktsektionen (storlek borde sättas med font-size istället för size) */
+.contactTitle {
     size: 100%;
 }
 
-.contactInfo{
+/* Standardvisning av kontaktinfo (desktop) */
+.contactInfo {
     display: block;
 }
 
-.contactInfoPhone{
+/* Mobilversion av kontaktinfo – dold på desktop */
+.contactInfoPhone {
     display: none;
 }
 
-.contactInfoHolder{
+/* Ytterligare layout för kontaktinfo – två kolumner */
+.contactInfoHolder {
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: whitesmoke;
 }
 
+/* Responsiva regler för mindre skärmar */
 @media screen and (max-width: 768px) {
-    .contactInfo{
+    .contactInfo {
         display: none;
     }
 
-    .contactInfoPhone{
+    .contactInfoPhone {
         display: block;
     }
-
-
-
-
 }
 
-
-
-
-
-
-
-
+/* Footer med mörk bakgrund och centrerat innehåll */
 footer {
     background-color: #333;
     color: white;
@@ -177,6 +186,7 @@ footer {
     text-align: center;
 }
 
+/* Footer layout: flexbox som staplar kolumner vertikalt (mobil) */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -187,17 +197,20 @@ footer {
     text-align: center;
 }
 
+/* Tre separata kolumner i footern */
 .footer-left, .footer-center, .footer-right {
     flex: 1;
     min-width: 250px;
     margin: 10px;
 }
 
+/* Titlar i footern */
 .footer-left h3, .footer-center h3, .footer-right h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
+/* Lista i mittenkolumnen */
 .footer-center ul {
     list-style: none;
     padding: 0;
@@ -213,20 +226,24 @@ footer {
     transition: 0.3s;
 }
 
+/* Hovereffekt för länkar i footern */
 .footer-center ul li a:hover {
     color: #f4a261;
 }
 
+/* Text i högerkolumn, inkl. e-post eller liknande */
 .footer-right p, .footer-right a {
     font-size: 0.9rem;
     color: white;
     text-decoration: none;
 }
 
+/* Hovereffekt för kontaktlänkar */
 .footer-right a:hover {
     text-decoration: underline;
 }
 
+/* Footer blir horisontell på större skärmar */
 @media screen and (min-width: 768px) {
     .footer-container {
         flex-direction: row;
