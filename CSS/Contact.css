@@ -108,7 +108,8 @@ nav {
         display: none;
         justify-content: center;
         align-items: center;
-    }    
+    }
+    
 }
 
 /* Utseende på hamburgerikonen (de tre strecken) */
@@ -143,21 +144,25 @@ nav {
     grid-template-columns: 50% 50%;
     background-color: whitesmoke;
     min-height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    align-items: center;
 }
 
-/* Titel för kontaktsektionen (storlek borde sättas med font-size istället för size) */
+/* Titel för kontaktsektionen */
 .contactTitle {
-    size: 100%;
+    font-size: 100%;
 }
 
 /* Standardvisning av kontaktinfo (desktop) */
 .contactInfo {
-    display: block;
+    display: none;
 }
 
 /* Mobilversion av kontaktinfo – dold på desktop */
 .contactInfoPhone {
-    display: none;
+    display: block;
 }
 
 /* Ytterligare layout för kontaktinfo – två kolumner */
@@ -167,14 +172,14 @@ nav {
     background-color: whitesmoke;
 }
 
-/* Responsiva regler för mindre skärmar */
-@media screen and (max-width: 768px) {
+/* Responsiva regler för större skärmar */
+@media screen and (min-width: 768px) {
     .contactInfo {
-        display: none;
+        display: block;
     }
 
     .contactInfoPhone {
-        display: block;
+        display: none;
     }
 }
 

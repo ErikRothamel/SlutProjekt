@@ -119,27 +119,31 @@ nav {
     margin: 5px;
 }
 
-/* Huvudsektionen */
+/* Huvudsektionen – två kolumner sida vid sida */
 .mainMain {
     display: grid;
-    background-color: whitesmoke;
-
+    grid-template-columns: 50% 50%;
 }
 
+/* Bildbehållare – svart bakgrund, klipper överskott */
+.mainImgHolder {
+    background-color: black;
+    overflow: hidden;
+}
 
-/* Textbehållare */
+/* Bilden täcker hela ytan utan att förvrängas */
+.mainImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Bilden skalas så att den fyller utan att förlora proportioner */
+    object-position: center;   /* Bildens mittpunkt placeras i mitten av behållaren */
+}
+
+/* Textbehållare bredvid bilden */
 .mainTxtHolder {
     background-color: whitesmoke;
     text-align: center;
     padding: 20px;
-}
-
-/* Linje */
-.line {
-    height: 5px;
-    background-color: black;
-    width: 25%;
-    margin: auto;
 }
 
 /* Avstånd under stycke i textdelen */
